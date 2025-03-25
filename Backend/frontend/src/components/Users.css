@@ -1,0 +1,781 @@
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.success-message {
+  background-color: #4CAF50;
+  color: white;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  text-align: center;
+  animation: fadeOut 3s forwards;
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  70% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.error-message {
+  background-color: #ff4444;
+  color: white;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Profile Section */
+.profile-section {
+  background-color: #2c2c2c;
+  border-radius: 8px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profile-section h2 {
+  color: white;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.profile-info {
+  background-color: #3c3c3c;
+  padding: 1.5rem;
+  border-radius: 4px;
+  color: white;
+}
+
+.profile-info p {
+  margin: 0.5rem 0;
+}
+
+.profile-info strong {
+  color: #61dafb;
+  margin-right: 0.5rem;
+}
+
+/* Invitations Section */
+.invitations-section {
+  background-color: #2c2c2c;
+  border-radius: 8px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.invitations-section h2 {
+  color: white;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.no-invitations {
+  color: #888;
+  text-align: center;
+  padding: 1rem;
+  background-color: #3c3c3c;
+  border-radius: 4px;
+}
+
+.invitations-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.invitation-item {
+  background-color: #3c3c3c;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.invitation-info {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.invitation-info .inviter {
+  font-weight: bold;
+  color: #61dafb;
+}
+
+.invitation-info .party-name {
+  color: #ddd;
+}
+
+.invitation-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.accept-button, .decline-button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.accept-button {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.accept-button:hover {
+  background-color: #45a049;
+}
+
+.decline-button {
+  background-color: #f44336;
+  color: white;
+}
+
+.decline-button:hover {
+  background-color: #da190b;
+}
+
+/* Parties Section */
+.parties-section {
+  background-color: #2c2c2c;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.create-party-container {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #3c3c3c;
+}
+
+.parties-section h2 {
+  color: white;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.create-party-form {
+  display: flex;
+  gap: 1rem;
+}
+
+.create-party-form input {
+  flex: 1;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #3c3c3c;
+  color: white;
+}
+
+.create-party-form input::placeholder {
+  color: #888;
+}
+
+.create-party-form button {
+  padding: 0.8rem 1.5rem;
+  background-color: #61dafb;
+  color: #1a1a1a;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.create-party-form button:hover {
+  background-color: #4fa8c7;
+}
+
+.no-parties {
+  color: #888;
+  text-align: center;
+  padding: 1rem;
+  background-color: #3c3c3c;
+  border-radius: 4px;
+}
+
+.parties-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.party-item {
+  background-color: #3c3c3c;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.party-item:hover {
+  background-color: #4c4c4c;
+}
+
+.party-item.selected {
+  background-color: #5c5c5c;
+  border-left: 4px solid #61dafb;
+}
+
+.party-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.party-name {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.party-members {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.party-actions {
+  padding-top: 1rem;
+  border-top: 1px solid #4c4c4c;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.invite-form {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+}
+
+.invite-form input {
+  flex: 1;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #2c2c2c;
+  color: white;
+}
+
+.invite-form input::placeholder {
+  color: #888;
+}
+
+.invite-form button {
+  padding: 0.8rem 1.5rem;
+  background-color: #61dafb;
+  color: #1a1a1a;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.invite-form button:hover {
+  background-color: #4fa8c7;
+}
+
+.delete-button {
+  width: 100%;
+  padding: 0.8rem 1.5rem;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.delete-button:hover {
+  background-color: #da190b;
+}
+
+.create-game-form {
+  display: flex;
+  gap: 10px;
+  margin: 15px 0;
+  padding: 15px;
+  background-color: #2a2a2a;
+  border-radius: 8px;
+  align-items: center;
+}
+
+.create-game-form select {
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: 1px solid #444;
+  background-color: #333;
+  color: white;
+  font-size: 14px;
+  min-width: 120px;
+}
+
+.create-game-form input:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  background-color: #2a2a2a;
+}
+
+.create-game-form button {
+  padding: 8px 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.create-game-form button:hover {
+  background-color: #45a049;
+  transform: translateY(-1px);
+}
+
+.games-list {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #2a2a2a;
+  border-radius: 8px;
+}
+
+.games-list h3 {
+  color: white;
+  margin-bottom: 15px;
+  font-size: 18px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #444;
+}
+
+.games-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.game-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #333;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  transition: all 0.2s ease;
+}
+
+.game-item:hover {
+  background-color: #3a3a3a;
+  transform: translateY(-1px);
+}
+
+.game-info {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.game-format {
+  font-weight: bold;
+  color: #4CAF50;
+  padding: 4px 8px;
+  background-color: rgba(76, 175, 80, 0.1);
+  border-radius: 4px;
+}
+
+.game-format.deathmatch {
+  color: #ff4081;
+  background-color: rgba(255, 64, 129, 0.1);
+  border: 1px solid rgba(255, 64, 129, 0.2);
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.game-type {
+  color: #2196F3;
+  padding: 4px 8px;
+  background-color: rgba(33, 150, 243, 0.1);
+  border-radius: 4px;
+}
+
+.game-players {
+  color: #888;
+  padding: 4px 8px;
+  background-color: rgba(136, 136, 136, 0.1);
+  border-radius: 4px;
+}
+
+.game-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.join-button, .leave-button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.join-button {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.join-button:hover {
+  background-color: #45a049;
+}
+
+.leave-button {
+  background-color: #f44336;
+  color: white;
+}
+
+.leave-button:hover {
+  background-color: #da190b;
+}
+
+.no-games {
+  color: #888;
+  text-align: center;
+  padding: 20px;
+  font-style: italic;
+}
+
+.game-expires {
+  color: #ff9800;
+  font-size: 0.9em;
+  padding: 4px 8px;
+  background-color: rgba(255, 152, 0, 0.1);
+  border-radius: 4px;
+}
+
+.match-result {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 14px;
+  margin-top: 8px;
+  padding: 8px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+}
+
+.match-result .winner {
+  color: #4caf50;
+  font-weight: bold;
+}
+
+.match-result .loser {
+  color: #f44336;
+  font-weight: bold;
+}
+
+.match-result .score {
+  color: #888;
+  margin-left: 8px;
+}
+
+.expired-badge {
+  background-color: #666;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.ready-status {
+  color: #ffd700;
+  font-size: 0.9em;
+  padding: 4px 8px;
+  background-color: rgba(255, 215, 0, 0.1);
+  border-radius: 4px;
+  margin-left: 8px;
+}
+
+.game-controls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.ready-button {
+  padding: 8px 16px;
+  background-color: #ffd700;
+  color: #000;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.ready-button:hover {
+  background-color: #ffed4a;
+  transform: translateY(-1px);
+}
+
+.delete-button {
+  padding: 8px 16px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.delete-button:hover {
+  background-color: #c82333;
+  transform: translateY(-1px);
+}
+
+.create-game-form select:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  background-color: #2a2a2a;
+}
+
+.match-result-form {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.match-result-form input {
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid #444;
+  background-color: #222;
+  color: #fff;
+  font-size: 14px;
+  width: 120px;
+}
+
+.win-button {
+  background-color: #4caf50;
+  color: white;
+  padding: 4px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.win-button:hover {
+  background-color: #45a049;
+}
+
+.lose-button {
+  background-color: #f44336;
+  color: white;
+  padding: 4px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.lose-button:hover {
+  background-color: #da190b;
+}
+
+.party-members-list {
+  margin: 15px 0;
+  padding: 15px;
+  background-color: #2a2a2a;
+  border-radius: 8px;
+}
+
+.party-members-list h4 {
+  color: #61dafb;
+  margin: 0 0 10px 0;
+  font-size: 16px;
+}
+
+.party-members-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.party-member {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background-color: #333;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.party-member:last-child {
+  margin-bottom: 0;
+}
+
+.member-name {
+  color: #fff;
+  font-size: 14px;
+}
+
+.creator-badge {
+  background-color: #61dafb;
+  color: #1a1a1a;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.tabs {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #444;
+  padding-bottom: 8px;
+}
+
+.tab-button {
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 16px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.tab-button:hover {
+  color: #61dafb;
+}
+
+.tab-button.active {
+  color: #61dafb;
+  border-bottom: 2px solid #61dafb;
+  margin-bottom: -9px;
+}
+
+.game-listings-section {
+  padding: 20px;
+  background-color: #1a1a1a;
+  border-radius: 8px;
+}
+
+.game-listings-section h2 {
+  color: #61dafb;
+  margin-bottom: 20px;
+}
+
+.create-game-form.standalone {
+  margin: 0 0 20px 0;
+  padding: 20px;
+  background-color: #2a2a2a;
+  border-radius: 8px;
+}
+
+.games-list.standalone {
+  margin: 0;
+  padding: 20px;
+  background-color: #2a2a2a;
+  border-radius: 8px;
+}
+
+.game-creator {
+  color: #888;
+  font-size: 14px;
+  margin-left: 12px;
+}
+
+.party-selection {
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #2a2a2a;
+  border-radius: 8px;
+}
+
+.party-selection h3 {
+  color: #61dafb;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.party-select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #444;
+  background-color: #333;
+  color: white;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.party-select option {
+  background-color: #333;
+  color: white;
+}
+
+.selected-party-info {
+  margin-top: 15px;
+  padding: 15px;
+  background-color: #333;
+  border-radius: 4px;
+}
+
+.selected-party-info h4 {
+  color: white;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.party-members-list.compact {
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #2a2a2a;
+  border-radius: 4px;
+}
+
+.party-members-list.compact ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.party-members-list.compact .party-member {
+  padding: 4px 8px;
+  margin: 0;
+  background-color: #444;
+} 
